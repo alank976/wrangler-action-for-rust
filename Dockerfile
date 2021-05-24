@@ -15,4 +15,5 @@ ENV PATH      $NVM_DIR/versions/node/v$NODE_VERSION/bin:$PATH
 
 RUN cargo install wasm-pack
 COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
