@@ -1,0 +1,21 @@
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    name: test wrangler-action-for-rust
+    steps:
+      - name: print cargo and npm versions
+        id: print-versions
+        uses: alank976/wrangler-action-for-rust@main
+        with: 
+          apiToken: foo
+          # environment: dev
+          publish: false
+          preCommands: |
+            wrangler --version
+            npm --version
+          
+      # Use the output from the `hello` step
+      - name: Get the output time
+        run: echo "The time was ${{ steps.hello.outputs.time }}"
