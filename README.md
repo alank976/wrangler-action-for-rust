@@ -1,0 +1,15 @@
+# wrangler-action-for-rust
+
+This is namely a github action which helps deploy Cloudflare workers via wrangler CLI. There is [an official action from Cloudflare](https://github.com/cloudflare/wrangler-action), however, it doesn't support Rust (via wasm-bindgen) for now as [this issue describes](https://github.com/cloudflare/wrangler-action/issues/16). 
+
+## Approach
+This action uses Rust as base image instead of node since Rust compiler is relatively larger so this way betters off the docker caching layer. This docker image basically is a Rust + Node + Wrangler after all.
+
+## Versioning
+As mentioned, there are several versions have to be managed. We have Rust, NVM, Node, and wrangler. Only wrangler's can be specified via Action inputs and the rest of aforementioned are locked-in versions. 
+
+## Github action interface
+This action simply uses subset of [the official one](https://github.com/cloudflare/wrangler-action/blob/master/action.yml), but remove the legacy ones
+
+## Inputs, Authentication, etc
+Please refer to the [official one](https://github.com/cloudflare/wrangler-action) for details 
