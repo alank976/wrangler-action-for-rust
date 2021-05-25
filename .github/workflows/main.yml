@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: print cargo and npm versions
         id: print-versions
-        uses: alank976/wrangler-action-for-rust@1.0.0
+        uses: alank976/wrangler-action-for-rust@main
         with: 
           apiToken: foo
           # environment: dev
