@@ -17,4 +17,4 @@ RUN cargo install wasm-pack
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x entrypoint.sh
 RUN ls -lrta
-ENTRYPOINT ["ls -lrta"]
+ENTRYPOINT ["/entrypoint.sh"]
