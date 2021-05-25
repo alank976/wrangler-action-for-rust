@@ -8,14 +8,12 @@ jobs:
       - name: print cargo and npm versions
         id: print-versions
         uses: alank976/wrangler-action-for-rust@main
-        with: 
+        with:
           apiToken: foo
           # environment: dev
           publish: false
           preCommands: |
+            echo "Installed wrangler version:"
             wrangler --version
+            echo "Installed npm version:"
             npm --version
-          
-      # Use the output from the `hello` step
-      - name: Get the output time
-        run: echo "The time was ${{ steps.hello.outputs.time }}"
