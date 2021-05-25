@@ -1,4 +1,4 @@
-name: "Deploy to Cloudflare Workers with Wrangler"
+name: "Deploy Rust projects to Cloudflare Workers with Wrangler"
 branding:
   icon: "upload-cloud"
   color: "orange"
