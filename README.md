@@ -48,10 +48,10 @@ jobs:
 ```
 
 ## Approach
-This action uses Rust as base image instead of node since Rust compiler is relatively larger so this way betters off the docker caching layer. This docker image basically is a Rust + Node + Wrangler after all.
+This action uses Rust as base image instead of node since Rust compiler is relatively larger so this way betters off the docker caching layer. This docker image basically is a Rust + Wrangler after all.
 
 ## Versioning
-As mentioned, there are several versions have to be managed. We have Rust, NVM, Node, and wrangler. Only wrangler's can be specified via Action inputs and the rest of aforementioned are locked-in versions. 
+As mentioned, there are several versions have to be managed. We have Rust and wrangler. Only wrangler's can be specified via Action inputs and the rest of aforementioned are locked-in versions. 
 
 ## Github action interface
 This action simply uses subset of [the official one](https://github.com/cloudflare/wrangler-action/blob/master/action.yml), but remove the legacy ones
